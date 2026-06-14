@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-200: #ddd6fe;
+  --color-primary-300: #c4b5fd;
+  --color-primary-400: #a78bfa;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  --color-primary-800: #5b21b6;
+  --color-primary-900: #4c1d95;
+  --color-primary-950: #2e1065;
+
+  --font-sans: 'Outfit', 'Inter', sans-serif;
+
+  --animate-float-slow: floatSlow 6s ease-in-out infinite;
+  --animate-float-medium: floatMedium 4.5s ease-in-out infinite;
+  --animate-float-fast: floatFast 3s ease-in-out infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes floatSlow {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes floatMedium {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes floatFast {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-transparent text-slate-800 transition-colors duration-300 font-sans antialiased selection:bg-primary-500 selection:text-white overflow-x-hidden;
+  }
+
+  /* Force dark mode background when dark class is applied to root html element */
+  html.dark body {
+    @apply bg-transparent text-slate-100;
+  }
+}
+
+/* Custom design system utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-nav {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glowing shadows */
+.glow-primary {
+  box-shadow: 0 0 50px -10px rgba(139, 92, 246, 0.25);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 50px -10px rgba(79, 70, 229, 0.25);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full border-2 border-solid border-slate-100 dark:border-slate-900;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
+
+/* Lenis Smooth Scroll Support */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Advanced Animation Utility Styles */
+
+/* Typewriter Blinking Cursor */
+.typewriter-cursor::after {
+  content: '|';
+  @apply text-indigo-500 font-light ml-0.5;
+  animation: cursor-blink 0.9s infinite;
+}
+
+@keyframes cursor-blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Parallax Background Words */
+.parallax-text-container {
+  @apply absolute left-0 right-0 overflow-hidden pointer-events-none select-none -z-10 flex justify-center items-center;
+  height: 100%;
+}
+
+.parallax-bg-text {
+  @apply font-extrabold uppercase tracking-widest text-slate-300/55 dark:text-slate-900/35 whitespace-nowrap leading-none;
+  font-size: clamp(3.5rem, 18vw, 16rem); /* scales from ~56px on mobile to 256px on wide screens */
+  font-family: 'Outfit', sans-serif;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Glow Cards border outline */
+.glow-card-hover {
+  @apply transition-all duration-300;
+}
+
+.glow-card-hover:hover {
+  @apply border-indigo-500/35 dark:border-indigo-400/30;
+  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.15), 0 4px 12px -5px rgba(139, 92, 246, 0.1);
+}
+
+/* ─── Responsive Section Spacing (360px → 1900px) ───────────────────────── */
+main > section,
+.dark main > section {
+  /* Mobile (≤ 639px): compact spacing */
+  padding-top: 60px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Small tablet (640px+) */
+@media (min-width: 640px) {
+  main > section,
+  .dark main > section {
+    padding-top: 80px !important;
+  }
+}
+
+/* Tablet / laptop (1024px+) */
+@media (min-width: 1024px) {
+  main > section,
+  .dark main > section {
+    padding-top: 100px !important;
+  }
+}
+
+/* Large desktop (1280px+) */
+@media (min-width: 1280px) {
+  main > section,
+  .dark main > section {
+    padding-top: 110px !important;
+  }
+}
+
+/* XL desktop (1536px+) */
+@media (min-width: 1536px) {
+  main > section,
+  .dark main > section {
+    padding-top: 120px !important;
+  }
+}
+
+/* Contact section — extra bottom padding */
+#contact,
+.dark #contact {
+  padding-bottom: 100px !important;
+}
+
+/* Glassmorphism card utility */
+.glass {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.08);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+}
