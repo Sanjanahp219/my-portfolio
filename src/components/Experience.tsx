@@ -3,6 +3,7 @@ import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { portfolioData } from '../data/portfolioData';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,13 +38,7 @@ export const Experience: React.FC = () => {
     });
   }, { scope: sectionRef });
 
-  const responsibilities = [
-    'Developed high-fidelity, fully responsive client websites converting creative designer files into functional React code.',
-    'Built, documented, and tested reusable custom UI components based on design languages, reducing code redundancy.',
-    'Integrated complex REST APIs using Axios and standard error handling to manage stateful asynchronous fetch pipelines.',
-    'Collaborated closely with visual UI/UX designers to translate requirements into smooth layout transitions and high-performance screens.',
-    'Optimized frontend asset sizes, script caching mechanisms, and bundle code-splitting, resulting in improved responsiveness.'
-  ];
+  const experiences = portfolioData.experience;
 
   return (
     <section 
@@ -78,49 +73,50 @@ export const Experience: React.FC = () => {
               <Briefcase size={14} />
             </div>
 
-            {/* Career Card */}
-            <div className="glass p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
-              
-              {/* Card Header */}
-              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                    Front-End Developer
-                  </h3>
-                  <p className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 mt-1">
-                    Swaragh Technology
-                  </p>
-                </div>
+            {experiences.map((exp, idx) => (
+              <div key={idx} className="glass p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
                 
-                {/* Meta details */}
-                <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-550 dark:text-slate-400">
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full">
-                    <Calendar size={12} className="text-indigo-600 dark:text-indigo-400" />
-                    <span>2024 - Present</span>
+                {/* Card Header */}
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                      {exp.title}
+                    </h3>
+                    <p className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 mt-1">
+                      {exp.company}
+                    </p>
                   </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full">
-                    <MapPin size={12} className="text-indigo-600 dark:text-indigo-400" />
-                    <span>Remote / On-site</span>
+                  
+                  {/* Meta details */}
+                  <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-550 dark:text-slate-400">
+                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full">
+                      <Calendar size={12} className="text-indigo-600 dark:text-indigo-400" />
+                      <span>{exp.period}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full">
+                      <MapPin size={12} className="text-indigo-600 dark:text-indigo-400" />
+                      <span>{exp.location}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Responsibilities list */}
-              <div className="space-y-4">
-                <h4 className="text-sm font-extrabold text-slate-800 dark:text-slate-300 uppercase tracking-wide">
-                  Core Responsibilities & Achievements:
-                </h4>
-                <ul className="space-y-3.5">
-                  {responsibilities.map((resp, idx) => (
-                    <li key={idx} className="flex gap-3 items-start text-sm text-slate-650 dark:text-slate-400">
-                      <CheckCircle2 size={16} className="text-emerald-500 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
-                      <span className="leading-relaxed">{resp}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                {/* Responsibilities list */}
+                <div className="space-y-4">
+                  <h4 className="text-sm font-extrabold text-slate-800 dark:text-slate-300 uppercase tracking-wide">
+                    Core Responsibilities & Achievements:
+                  </h4>
+                  <ul className="space-y-3.5">
+                    {exp.responsibilities.map((resp, rIdx) => (
+                      <li key={rIdx} className="flex gap-3 items-start text-sm text-slate-650 dark:text-slate-400">
+                        <CheckCircle2 size={16} className="text-emerald-500 dark:text-emerald-400 flex-shrink-0 mt-0.5" />
+                        <span className="leading-relaxed">{resp}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-            </div>
+              </div>
+            ))}
 
           </div>
         </div>

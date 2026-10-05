@@ -3,6 +3,7 @@ import { ExternalLink, X, Info } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { portfolioData } from '../data/portfolioData';
 
 const Github = ({ size = 24, ...props }: { size?: number } & React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -57,56 +58,7 @@ export const Projects: React.FC = () => {
     });
   }, { scope: sectionRef });
 
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: 'SocialPoster',
-      subtitle: 'Multi-Platform Publisher & Analytics Dashboard',
-      description: 'A comprehensive management platform that allows creators and agencies to compose, schedule, publish posts, and track real-time analytics across different social media feeds.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'REST APIs', 'Chart.js', 'Redux Toolkit'],
-      features: [
-        'Post scheduling with an interactive calendar drag-and-drop workflow.',
-        'Real-time analytics graphs showing follower growth, click rates, and impressions.',
-        'Media library management with image cropping, compression, and asset tagging.',
-        '100% responsive, high-contrast interface designed for mobile and desktop screens.'
-      ],
-      image: '/social_poster_mockup.png',
-      demoUrl: '#',
-      githubUrl: 'https://github.com'
-    },
-    {
-      id: 2,
-      title: 'Event Booking System',
-      subtitle: 'Seamless Ticketing & Management Portal',
-      description: 'An interactive booking system allowing users to search, filter, and purchase tickets for live local concerts, theatre acts, and conferences, complete with order history.',
-      technologies: ['React', 'Context API', 'CSS Modules', 'JavaScript ES6', 'LocalStorage'],
-      features: [
-        'Advanced event filtering by category, date range, ticket price, and location.',
-        'Debounced search input with immediate reactive layout updating.',
-        'Step-by-step secure ticket booking wizard with visual seat selector.',
-        'Local mock authentication system saving user profiles and booked receipts.'
-      ],
-      image: '/event_booking_mockup.png',
-      demoUrl: '#',
-      githubUrl: 'https://github.com'
-    },
-    {
-      id: 3,
-      title: 'Online Job Portal',
-      subtitle: 'Recruitment & Job Search Engine',
-      description: 'A professional portal connecting candidates with hiring managers, offering powerful searching tools, filters, applicant profile generation, and job application tracking.',
-      technologies: ['React', 'JavaScript', 'API Integration', 'Tailwind CSS', 'Axios'],
-      features: [
-        'Job search containing multi-criteria filter toggles (Remote, Full-Time, Salary, Experience).',
-        'Dynamic resume uploader parsing details to auto-populate application forms.',
-        'Applicant tracking dashboard to monitor application states (Applied, Interviewing, Offered).',
-        'Clean responsive UI optimized for recruiters on tablets and hiring managers on desktop.'
-      ],
-      image: '/job_portal_mockup.png',
-      demoUrl: '#',
-      githubUrl: 'https://github.com'
-    }
-  ];
+  const projects: Project[] = portfolioData.projects;
 
   return (
     <section 

@@ -3,6 +3,7 @@ import { Layout, Palette, Workflow, Globe, Wrench } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { portfolioData } from '../data/portfolioData';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,38 +38,19 @@ export const Skills: React.FC = () => {
     });
   }, { scope: sectionRef });
 
-  const skillCategories = [
-    {
-      title: 'Frontend Core',
-      icon: <Layout className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-      skills: ['HTML5', 'CSS3', 'JavaScript ES6+', 'TypeScript', 'React.js'],
-      gradient: 'from-blue-500/10 to-indigo-500/10 dark:from-blue-500/5 dark:to-indigo-500/5',
-    },
-    {
-      title: 'Styling & Layout',
-      icon: <Palette className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
-      skills: ['Tailwind CSS', 'Material UI', 'Responsive Design', 'CSS Grid & Flexbox'],
-      gradient: 'from-purple-500/10 to-pink-500/10 dark:from-purple-500/5 dark:to-pink-500/5',
-    },
-    {
-      title: 'State Management',
-      icon: <Workflow className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
-      skills: ['Context API', 'Redux Toolkit', 'Redux (Thunk)', 'State Persist'],
-      gradient: 'from-emerald-500/10 to-teal-500/10 dark:from-emerald-500/5 dark:to-teal-500/5',
-    },
-    {
-      title: 'API & Integration',
-      icon: <Globe className="w-6 h-6 text-amber-600 dark:text-amber-400" />,
-      skills: ['Axios', 'Fetch API', 'REST APIs', 'JSON Schema', 'JWT Auth'],
-      gradient: 'from-amber-500/10 to-orange-500/10 dark:from-amber-500/5 dark:to-orange-500/5',
-    },
-    {
-      title: 'Developer Tools',
-      icon: <Wrench className="w-6 h-6 text-rose-600 dark:text-rose-400" />,
-      skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'Vite', 'npm / yarn'],
-      gradient: 'from-rose-500/10 to-red-500/10 dark:from-rose-500/5 dark:to-red-500/5',
-    },
+  // We'll map the icons to the imported skills
+  const iconMap = [
+    <Layout className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
+    <Palette className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
+    <Workflow className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
+    <Globe className="w-6 h-6 text-amber-600 dark:text-amber-400" />,
+    <Wrench className="w-6 h-6 text-rose-600 dark:text-rose-400" />
   ];
+
+  const skillCategories = portfolioData.skills.map((category, idx) => ({
+    ...category,
+    icon: iconMap[idx % iconMap.length]
+  }));
 
   return (
     <section 

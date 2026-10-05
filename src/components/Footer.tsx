@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
+import { portfolioData } from '../data/portfolioData';
 
 const Github = ({ size = 24, ...props }: { size?: number } & React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -27,17 +28,17 @@ export const Footer: React.FC = () => {
           {/* Logo & Tagline */}
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent inline-block font-sans">
-              Sanjana.dev
+              {portfolioData.name.split(' ')[0]}.dev
             </h3>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-              React Developer | Front-End Developer
+              {portfolioData.role}
             </p>
           </div>
 
           {/* Social Links */}
           <div className="flex space-x-5">
             <a 
-              href="https://github.com" 
+              href={portfolioData.github} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
@@ -46,7 +47,7 @@ export const Footer: React.FC = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href={portfolioData.linkedin} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
@@ -55,7 +56,7 @@ export const Footer: React.FC = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="mailto:sanjana@example.com" 
+              href={`mailto:${portfolioData.email}`} 
               className="text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
               aria-label="Email"
             >
@@ -65,7 +66,7 @@ export const Footer: React.FC = () => {
 
           {/* Copyright */}
           <div className="text-sm text-slate-400 dark:text-slate-500 text-center md:text-right">
-            <p>&copy; {currentYear} Sanjana. All Rights Reserved.</p>
+            <p>&copy; {currentYear} {portfolioData.name}. All Rights Reserved.</p>
             <p className="text-xs mt-0.5">Designed & Built with ❤️ using React & Tailwind</p>
           </div>
 

@@ -3,6 +3,7 @@ import { FileDown, Eye, Printer, X, Award, Briefcase, GraduationCap } from 'luci
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { portfolioData } from '../data/portfolioData';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,7 +78,7 @@ export const Resume: React.FC = () => {
               </button>
 
               <a
-                href="data:text/plain;charset=utf-8,Sanjana - Front-End Developer Resume%0A%0ASUMMARY%0APassionate React and Front-End Developer with 2+ years of experience building responsive, user-friendly applications.%0A%0AEXPERIENCE%0A- Swaragh Technology, Front-End Developer (2024 - Present)%0A%0ASKILLS%0A- React, TypeScript, JavaScript, Tailwind CSS, Material UI, Redux, REST APIs, Git"
+                href={`data:text/plain;charset=utf-8,${portfolioData.name} - ${portfolioData.role} Resume%0A%0ASUMMARY%0A${portfolioData.resumeSummary}%0A%0AEXPERIENCE%0A- ${portfolioData.experience[0].company}, ${portfolioData.experience[0].title} (${portfolioData.experience[0].period})%0A%0ASKILLS%0A- ${portfolioData.skills.map(s => s.skills.join(', ')).join(', ')}`}
                 download="sanjana_resume.txt"
                 className="inline-flex justify-center items-center gap-2 px-6 py-3.5 rounded-2xl font-bold text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-all text-sm"
               >
@@ -98,9 +99,9 @@ export const Resume: React.FC = () => {
 
               {/* Resume Header */}
               <div className="border-b border-slate-150 dark:border-slate-850 pb-6 mb-6">
-                <h4 className="text-xl font-bold text-slate-900 dark:text-white">Sanjana</h4>
-                <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mt-0.5">Front-End Developer | React Developer</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">sanjana@example.com | Bengaluru, India</p>
+                <h4 className="text-xl font-bold text-slate-900 dark:text-white">{portfolioData.name.split(' ')[0]}</h4>
+                <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mt-0.5">{portfolioData.role}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">{portfolioData.email} | {portfolioData.location}</p>
               </div>
 
               {/* Experience Mini Block */}
@@ -111,10 +112,10 @@ export const Resume: React.FC = () => {
                     <span>Recent Experience</span>
                   </h5>
                   <div className="pl-4 border-l border-slate-200 dark:border-slate-800">
-                    <p className="text-sm font-bold text-slate-900 dark:text-white">Front-End Developer</p>
-                    <p className="text-xs text-indigo-600 dark:text-indigo-400 mt-0.5">Swaragh Technology | 2024 - Present</p>
+                    <p className="text-sm font-bold text-slate-900 dark:text-white">{portfolioData.experience[0].title}</p>
+                    <p className="text-xs text-indigo-600 dark:text-indigo-400 mt-0.5">{portfolioData.experience[0].company} | {portfolioData.experience[0].period}</p>
                     <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 line-clamp-2">
-                      Developed responsive websites, built custom React components, integrated REST APIs, and optimized layouts.
+                      {portfolioData.experience[0].responsibilities[0]}
                     </p>
                   </div>
                 </div>
@@ -126,7 +127,7 @@ export const Resume: React.FC = () => {
                     <span>Technical Highlights</span>
                   </h5>
                   <div className="flex flex-wrap gap-1.5 pl-4">
-                    {['React.js', 'TypeScript', 'Tailwind CSS', 'Material UI', 'REST APIs', 'Redux'].map((tech, idx) => (
+                    {portfolioData.skills[0].skills.slice(0, 3).concat(portfolioData.skills[1].skills.slice(0, 3)).map((tech, idx) => (
                       <span key={idx} className="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-650 dark:text-slate-400">
                         {tech}
                       </span>
@@ -160,16 +161,16 @@ export const Resume: React.FC = () => {
                 
                 {/* Header */}
                 <div className="text-center border-b-2 border-indigo-600 pb-6 mb-8">
-                  <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">SANJANA</h1>
-                  <p className="text-base font-semibold text-indigo-600 uppercase tracking-wider mt-1">Front-End Developer | React Developer</p>
+                  <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight uppercase">{portfolioData.name}</h1>
+                  <p className="text-base font-semibold text-indigo-600 uppercase tracking-wider mt-1">{portfolioData.role}</p>
                   <div className="flex flex-wrap justify-center gap-4 text-xs text-slate-600 mt-3 font-medium">
-                    <span>Bengaluru, India</span>
+                    <span>{portfolioData.location}</span>
                     <span>•</span>
-                    <span>sanjana@example.com</span>
+                    <span>{portfolioData.email}</span>
                     <span>•</span>
-                    <span>linkedin.com/in/sanjana</span>
+                    <span>{portfolioData.linkedin.replace('https://www.', '')}</span>
                     <span>•</span>
-                    <span>github.com/sanjana</span>
+                    <span>{portfolioData.github.replace('https://', '')}</span>
                   </div>
                 </div>
 
@@ -181,29 +182,19 @@ export const Resume: React.FC = () => {
                     <div>
                       <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-2 mb-3">Profile Summary</h4>
                       <p className="text-xs text-slate-600 leading-relaxed">
-                        Detail-oriented Front-End Developer with 2 years of experience specializing in building responsive React applications. Passionate about translating designs into pixel-perfect pages, designing modular reusable components, and optimizing site speed.
+                        {portfolioData.resumeSummary}
                       </p>
                     </div>
 
                     <div>
                       <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider border-b border-slate-200 pb-2 mb-3">Technical Skills</h4>
                       <div className="space-y-3">
-                        <div>
-                          <p className="text-xs font-bold text-slate-800">Languages & Core:</p>
-                          <p className="text-[11px] text-slate-600 mt-0.5">React.js, TypeScript, JavaScript (ES6+), HTML5, CSS3</p>
-                        </div>
-                        <div>
-                          <p className="text-xs font-bold text-slate-800">Styling Frameworks:</p>
-                          <p className="text-[11px] text-slate-600 mt-0.5">Tailwind CSS, Material UI, CSS Grid / Flexbox</p>
-                        </div>
-                        <div>
-                          <p className="text-xs font-bold text-slate-800">State & APIs:</p>
-                          <p className="text-[11px] text-slate-600 mt-0.5">Redux Toolkit, Context API, Axios, Fetch, REST APIs</p>
-                        </div>
-                        <div>
-                          <p className="text-xs font-bold text-slate-800">Developer Tools:</p>
-                          <p className="text-[11px] text-slate-600 mt-0.5">Git, GitHub, VS Code, Postman, Vite, npm</p>
-                        </div>
+                        {portfolioData.skills.map((category, idx) => (
+                          <div key={idx}>
+                            <p className="text-xs font-bold text-slate-800">{category.title}:</p>
+                            <p className="text-[11px] text-slate-600 mt-0.5">{category.skills.join(', ')}</p>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -218,19 +209,20 @@ export const Resume: React.FC = () => {
                         <span>Work Experience</span>
                       </h4>
                       <div className="space-y-4">
-                        <div>
-                          <div className="flex justify-between items-start">
-                            <h5 className="text-xs font-bold text-slate-850">Front-End Developer</h5>
-                            <span className="text-[11px] text-slate-500 font-semibold">2024 - Present</span>
+                        {portfolioData.experience.map((exp, idx) => (
+                          <div key={idx}>
+                            <div className="flex justify-between items-start">
+                              <h5 className="text-xs font-bold text-slate-850">{exp.title}</h5>
+                              <span className="text-[11px] text-slate-500 font-semibold">{exp.period}</span>
+                            </div>
+                            <p className="text-xs font-bold text-indigo-600 mt-0.5">{exp.company}</p>
+                            <ul className="list-disc list-inside text-[11px] text-slate-650 mt-2 space-y-1 pl-1">
+                              {exp.responsibilities.map((resp, rIdx) => (
+                                <li key={rIdx}>{resp}</li>
+                              ))}
+                            </ul>
                           </div>
-                          <p className="text-xs font-bold text-indigo-600 mt-0.5">Swaragh Technology</p>
-                          <ul className="list-disc list-inside text-[11px] text-slate-650 mt-2 space-y-1 pl-1">
-                            <li>Developed high-fidelity, responsive client websites transforming UI/UX wireframes.</li>
-                            <li>Built reusable customized React components to boost development efficiency.</li>
-                            <li>Integrated backend REST API communication channels with Axios.</li>
-                            <li>Optimized loading performance and rendering speeds of pages.</li>
-                          </ul>
-                        </div>
+                        ))}
                       </div>
                     </div>
 
@@ -241,24 +233,17 @@ export const Resume: React.FC = () => {
                         <span>Key Projects</span>
                       </h4>
                       <div className="space-y-3">
-                        <div>
-                          <div className="flex justify-between items-start">
-                            <h5 className="text-xs font-bold text-slate-850">SocialPoster</h5>
-                            <span className="text-[10px] text-slate-500 font-semibold">React, TypeScript, Tailwind, REST API</span>
+                        {portfolioData.projects.slice(0, 2).map((project, idx) => (
+                          <div key={idx}>
+                            <div className="flex justify-between items-start">
+                              <h5 className="text-xs font-bold text-slate-850">{project.title}</h5>
+                              <span className="text-[10px] text-slate-500 font-semibold">{project.technologies.slice(0, 4).join(', ')}</span>
+                            </div>
+                            <p className="text-[11px] text-slate-605 mt-1 leading-relaxed">
+                              {project.description}
+                            </p>
                           </div>
-                          <p className="text-[11px] text-slate-605 mt-1 leading-relaxed">
-                            Designed scheduling calendar dashboards and visual analytics charts tracking follower conversion.
-                          </p>
-                        </div>
-                        <div>
-                          <div className="flex justify-between items-start">
-                            <h5 className="text-xs font-bold text-slate-850">Event Booking System</h5>
-                            <span className="text-[10px] text-slate-500 font-semibold">React, Context API, CSS, JavaScript</span>
-                          </div>
-                          <p className="text-[11px] text-slate-605 mt-1 leading-relaxed">
-                            Implemented event category search filters, seat selectors, and secure ticket purchasing pipelines.
-                          </p>
-                        </div>
+                        ))}
                       </div>
                     </div>
 
@@ -270,10 +255,10 @@ export const Resume: React.FC = () => {
                       </h4>
                       <div>
                         <div className="flex justify-between items-start">
-                          <h5 className="text-xs font-bold text-slate-850">Bachelor of Science in Computer Science / Information Technology</h5>
-                          <span className="text-[10px] text-slate-500 font-semibold">Graduated 2023</span>
+                          <h5 className="text-xs font-bold text-slate-850">{portfolioData.education.degree}</h5>
+                          <span className="text-[10px] text-slate-500 font-semibold">{portfolioData.education.period}</span>
                         </div>
-                        <p className="text-xs text-slate-500 mt-0.5">Relevant coursework in Web Tech, Data Structures, and Databases</p>
+                        <p className="text-xs text-slate-500 mt-0.5">{portfolioData.education.institution}</p>
                       </div>
                     </div>
 

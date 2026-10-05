@@ -3,6 +3,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { portfolioData } from '../data/portfolioData';
 
 const Github = ({ size = 24, ...props }: { size?: number } & React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -94,19 +95,19 @@ export const Contact: React.FC = () => {
     {
       icon: <Mail className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />,
       label: 'Email Me Directly',
-      value: 'sanjana@example.com',
-      href: 'mailto:sanjana@example.com',
+      value: portfolioData.email,
+      href: `mailto:${portfolioData.email}`,
     },
     {
       icon: <Phone className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />,
       label: 'Call / Message',
-      value: '+91 98765 43210',
-      href: 'tel:+919876543210',
+      value: portfolioData.phone,
+      href: `tel:${portfolioData.phone.replace(/\s+/g, '')}`,
     },
     {
       icon: <MapPin className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />,
       label: 'Location',
-      value: 'Bengaluru, India',
+      value: portfolioData.location,
       href: 'https://maps.google.com',
     },
   ];
@@ -114,12 +115,12 @@ export const Contact: React.FC = () => {
   const socialLinks = [
     {
       icon: <Github size={22} />,
-      href: 'https://github.com',
+      href: portfolioData.github,
       label: 'GitHub Profile',
     },
     {
       icon: <Linkedin size={22} />,
-      href: 'https://linkedin.com',
+      href: portfolioData.linkedin,
       label: 'LinkedIn Profile',
     },
   ];
@@ -221,7 +222,7 @@ export const Contact: React.FC = () => {
                     Message Sent Successfully!
                   </h4>
                   <p className="text-sm text-slate-650 dark:text-slate-400 max-w-sm mx-auto leading-relaxed">
-                    Thank you for reaching out, Sanjana! I will review your message and respond to your email as soon as possible.
+                    Thank you for reaching out, {portfolioData.name.split(' ')[0]}! I will review your message and respond to your email as soon as possible.
                   </p>
                   <button 
                     onClick={() => setSubmitted(false)}

@@ -3,6 +3,7 @@ import { ArrowRight, FileText, Mail } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useMagnetic } from '../hooks/useMagnetic';
+import { portfolioData } from '../data/portfolioData';
 import profilePhoto from '../assets/profile.jpg';
 
 export const Hero: React.FC = () => {
@@ -15,7 +16,7 @@ export const Hero: React.FC = () => {
 
   // Typewriter effect state
   const [displayText, setDisplayText] = useState('');
-  const roles = ['Front-End Developer', 'React Specialist', 'TypeScript Engineer'];
+  const roles = portfolioData.hero.roles;
 
   useEffect(() => {
     let currentRoleIdx = 0;
@@ -137,11 +138,11 @@ export const Hero: React.FC = () => {
           {/* Left Column: Details */}
           <div className="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
             <span className="hero-badge-intro inline-flex items-center self-center lg:self-start px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/30 mb-5">
-              Front-End Developer with 2 Years of Experience
+              {portfolioData.hero.badge}
             </span>
             
             <h1 className="hero-title tracking-tight text-slate-900 dark:text-white font-extrabold text-3xl sm:text-5xl md:text-6xl mb-4 leading-tight">
-              Hi, I'm <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Sanjana</span> 👋
+              Hi, I'm <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">{portfolioData.name.split(' ')[0]}</span> 👋
             </h1>
             
             <h2 className="hero-subtitle text-lg sm:text-xl md:text-2xl font-bold text-slate-700 dark:text-slate-300 mb-4 sm:mb-5 min-h-[32px] sm:min-h-[36px]">
@@ -149,7 +150,7 @@ export const Hero: React.FC = () => {
             </h2>
             
             <p className="hero-desc text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-8 leading-relaxed">
-              Specialized in building responsive, scalable, and modern web applications using React.js, TypeScript, Material UI, Tailwind CSS, JavaScript, and REST APIs. Passionate about creating clean UI, reusable components, and exceptional user experiences.
+              {portfolioData.hero.description}
             </p>
             
             {/* CTA Buttons */}
@@ -183,15 +184,15 @@ export const Hero: React.FC = () => {
             {/* Quick Stats */}
             <div className="hero-stats grid grid-cols-3 gap-4 border-t border-slate-200 dark:border-slate-850 pt-8 max-w-lg mx-auto lg:mx-0">
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">2+</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">{portfolioData.hero.stats.experience}+</p>
                 <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">Years Experience</p>
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">10+</p>
+                <p className="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">{portfolioData.hero.stats.projects}</p>
                 <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">Projects Completed</p>
               </div>
               <div className="flex flex-col justify-center">
-                <p className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 leading-tight">React & TS</p>
+                <p className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 leading-tight">{portfolioData.hero.stats.focus}</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">Developer</p>
               </div>
             </div>
@@ -206,8 +207,8 @@ export const Hero: React.FC = () => {
             {/* Profile Photo - Square */}
             <div className="hero-image-container relative w-72 h-72 sm:w-80 sm:h-80 md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem] rounded-2xl overflow-hidden shadow-2xl shadow-indigo-600/20 dark:shadow-indigo-900/40 transition-transform duration-300 hover:scale-[1.02]">
               <img
-                src={profilePhoto}
-                alt="Sanjana – Front-End Developer"
+                src={profilePhoto} // TODO: Add real profile photo
+                alt={`${portfolioData.name} – ${portfolioData.role}`}
                 className="w-full h-full object-cover object-top"
                 loading="eager"
               />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, Download } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import { portfolioData } from '../data/portfolioData';
 
 export const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -41,7 +42,7 @@ export const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="#home" className="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200 inline-block font-sans">
-              Sanjana.dev
+              {portfolioData.name.split(' ')[0]}.dev
             </a>
           </div>
 

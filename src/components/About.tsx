@@ -3,6 +3,7 @@ import { Layers, Monitor, Cpu } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { portfolioData } from '../data/portfolioData';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -89,22 +90,22 @@ export const About: React.FC = () => {
             </h3>
             
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              I am a Front-End Developer with around 2 years of experience developing responsive web applications. My daily stack consists of React.js, JavaScript, TypeScript, HTML5, CSS3, Material UI, and Tailwind CSS.
+              {portfolioData.about.description1}
             </p>
             
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              I thoroughly enjoy solving visual and stateful problems in the browser. Translating Figma designs into responsive layouts and writing clean, reusable components that improve developer velocity is what drives my work.
+              {portfolioData.about.description2}
             </p>
 
             <div className="pt-4 flex justify-center lg:justify-start">
               <div className="flex gap-8 items-center bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-100 dark:border-slate-800">
                 <div>
-                  <span className="block text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">2024</span>
+                  <span className="block text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">{portfolioData.about.startYear}</span>
                   <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Start Year</span>
                 </div>
                 <div className="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
                 <div>
-                  <span className="block text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">Swaragh</span>
+                  <span className="block text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">{portfolioData.about.currentCompany}</span>
                   <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Current Company</span>
                 </div>
               </div>
