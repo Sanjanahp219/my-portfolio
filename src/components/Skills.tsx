@@ -3,7 +3,6 @@ import { Layout, Palette, Workflow, Globe, Wrench } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { portfolioData } from '../data/portfolioData';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,19 +37,44 @@ export const Skills: React.FC = () => {
     });
   }, { scope: sectionRef });
 
-  // We'll map the icons to the imported skills
-  const iconMap = [
-    <Layout className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-    <Palette className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
-    <Workflow className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
-    <Globe className="w-6 h-6 text-amber-600 dark:text-amber-400" />,
-    <Wrench className="w-6 h-6 text-rose-600 dark:text-rose-400" />
+  const skillCategories = [
+    {
+      title: 'Core Web',
+      icon: <Layout className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
+      skills: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'JSON', 'async/await'],
+      gradient: 'from-blue-500/10 to-indigo-500/10 dark:from-blue-500/5 dark:to-indigo-500/5',
+    },
+    {
+      title: 'React & Vue',
+      icon: <Workflow className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
+      skills: ['React.js', 'Vue.js', 'React Hooks', 'Functional Components', 'React Router', 'Redux Toolkit', 'Context API'],
+      gradient: 'from-emerald-500/10 to-teal-500/10 dark:from-emerald-500/5 dark:to-teal-500/5',
+    },
+    {
+      title: 'UI / UX & Design',
+      icon: <Palette className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
+      skills: ['Responsive & Mobile-First', 'Figma-to-UI', 'Flexbox/Grid', 'Tailwind CSS', 'Bootstrap', 'Material UI', 'Accessibility'],
+      gradient: 'from-purple-500/10 to-pink-500/10 dark:from-purple-500/5 dark:to-pink-500/5',
+    },
+    {
+      title: 'APIs & Data Flow',
+      icon: <Globe className="w-6 h-6 text-amber-600 dark:text-amber-400" />,
+      skills: ['REST APIs', 'GraphQL', 'Axios', 'Fetch API', 'JWT', 'JSON-driven data flows'],
+      gradient: 'from-amber-500/10 to-orange-500/10 dark:from-amber-500/5 dark:to-orange-500/5',
+    },
+    {
+      title: 'Performance Optimization',
+      icon: <Workflow className="w-6 h-6 text-cyan-600 dark:text-cyan-400" />,
+      skills: ['Lazy loading', 'Code splitting', 'React.memo', 'useMemo', 'useCallback', 'Chrome DevTools'],
+      gradient: 'from-cyan-500/10 to-blue-500/10 dark:from-cyan-500/5 dark:to-blue-500/5',
+    },
+    {
+      title: 'Tooling & Backend',
+      icon: <Wrench className="w-6 h-6 text-rose-600 dark:text-rose-400" />,
+      skills: ['Vite', 'Webpack', 'ESLint', 'npm', 'Git', 'GitHub', 'Jest', 'Node.js', 'Express.js', 'MongoDB', 'MySQL'],
+      gradient: 'from-rose-500/10 to-red-500/10 dark:from-rose-500/5 dark:to-red-500/5',
+    },
   ];
-
-  const skillCategories = portfolioData.skills.map((category, idx) => ({
-    ...category,
-    icon: iconMap[idx % iconMap.length]
-  }));
 
   return (
     <section 
@@ -77,7 +101,7 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {skillCategories.map((category, idx) => (
             <div key={idx} className="skills-reveal">
               <div 

@@ -3,7 +3,6 @@ import { Layers, Monitor, Cpu } from 'lucide-react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { portfolioData } from '../data/portfolioData';
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -86,27 +85,27 @@ export const About: React.FC = () => {
           {/* Left Side: Bio Content */}
           <div className="lg:col-span-6 space-y-6 about-reveal text-center lg:text-left">
             <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">
-              Transforming UI/UX Designs Into Interactive Reality
+              Building Production-Ready Responsive Interfaces
             </h3>
             
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              {portfolioData.about.description1}
+              I am a Front End Developer with nearly 2 years of hands-on experience building responsive, production-ready web applications using React.js, JavaScript (ES6+), TypeScript, HTML5, and CSS3. Strong in reusable components, REST API integration, state management, frontend architecture, and performance optimization.
             </p>
             
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              {portfolioData.about.description2}
+              Currently at Swaragh Technologies, Bangalore, I develop modular frontend architectures with React Hooks, Redux Toolkit, and Context API. I have delivered 10+ projects end-to-end and maintain 15+ live production systems.
             </p>
 
             <div className="pt-4 flex justify-center lg:justify-start">
               <div className="flex gap-8 items-center bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-100 dark:border-slate-800">
                 <div>
-                  <span className="block text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">{portfolioData.about.startYear}</span>
-                  <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Start Year</span>
+                  <span className="block text-xl font-extrabold text-indigo-600 dark:text-indigo-400">Jan 2025 - Present</span>
+                  <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Experience Period</span>
                 </div>
                 <div className="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
                 <div>
-                  <span className="block text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">{portfolioData.about.currentCompany}</span>
-                  <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Current Company</span>
+                  <span className="block text-xl font-extrabold text-indigo-600 dark:text-indigo-400">Swaragh Technologies</span>
+                  <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Company (Bangalore)</span>
                 </div>
               </div>
             </div>

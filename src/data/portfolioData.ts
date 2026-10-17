@@ -46,7 +46,7 @@ export const portfolioData = {
         "Integrate REST APIs with Axios and Fetch, handling asynchronous data flows, JSON-driven functionality and JWT-based authentication.",
         "Work with product and backend teams to review UI ideas, confirm technical feasibility and deliver high-quality interfaces with strong UX and cross-browser support.",
         "Optimize frontend performance with lazy loading, code splitting and memoization; use Chrome DevTools, Vite/Webpack and ESLint for debugging and code quality.",
-        "Use Git and GitHub for version control, pull requests and code reviews; delivered 10+ websites end-to-end and maintain 15+ production sites."
+        "Use Git and GitHub for version control, pull requests and code reviews; delivered 10+ projects end-to-end and maintain 15+ live production systems."
       ]
     }
   ],
@@ -125,9 +125,9 @@ export const portfolioData = {
         'Cross-browser compatibility and optimization.',
         'High performance and responsive layout.'
       ],
-      image: '/job_portal_mockup.png', // TODO: Update with real image
-      demoUrl: '#', // // TODO: Add live link if available
-      githubUrl: 'https://github.com/sanjanahp219' // // TODO: Add exact github repo link
+      image: '/job_portal_mockup.png',
+      demoUrl: 'https://work-showcase-nine.vercel.app',
+      githubUrl: 'https://work-showcase-nine.vercel.app'
     },
     {
       id: 4,
@@ -140,14 +140,14 @@ export const portfolioData = {
         'Reusable sections.',
         'Optimized assets for faster page loads.'
       ],
-      image: '/workspace_mockup.png', // TODO: Update with real image
-      demoUrl: '#', // // TODO: Add live link if available
-      githubUrl: 'https://github.com/sanjanahp219' // // TODO: Add exact github repo link
+      image: '/workspace_mockup.png',
+      demoUrl: 'https://work-showcase-nine.vercel.app',
+      githubUrl: 'https://work-showcase-nine.vercel.app'
     }
   ],
 
   // Resume Section / Summary
-  resumeSummary: "Front End Developer with nearly 2 years of hands-on experience building responsive, production-ready web applications and user interfaces using React.js, JavaScript, HTML5 and CSS3. Strong in reusable components, REST API integration, state management, frontend architecture and performance optimization. Delivered 10+ websites end-to-end and maintain 15+ live sites.",
+  resumeSummary: "Front End Developer with nearly 2 years of hands-on experience building responsive, production-ready web applications and user interfaces using React.js, JavaScript, HTML5 and CSS3. Strong in reusable components, REST API integration, state management, frontend architecture and performance optimization. Delivered 10+ projects end-to-end and maintain 15+ live production systems.",
   
   education: {
     degree: "Bachelor of Engineering, Computer Science",

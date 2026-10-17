@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Download } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
-import { portfolioData } from '../data/portfolioData';
+import { Menu, X, Download } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -34,15 +31,20 @@ export const Navbar: React.FC = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
       scrolled 
-        ? 'glass-nav py-3 shadow-lg shadow-slate-900/5 dark:shadow-slate-950/20' 
+        ? 'glass-nav py-1 shadow-lg shadow-slate-900/5 dark:shadow-slate-950/20' 
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-12">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200 inline-block font-sans">
-              {portfolioData.name.split(' ')[0]}.dev
+            <a href="#home" className="inline-block hover:scale-105 transition-transform duration-300">
+              <img
+                src="/logo.png"
+                alt="Sanjana Logo"
+                className="h-10 sm:h-12 w-auto object-contain"
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
             </a>
           </div>
 
@@ -60,19 +62,11 @@ export const Navbar: React.FC = () => {
               ))}
             </div>
 
-            <div className="flex items-center space-x-4 border-l border-slate-200 dark:border-slate-800 pl-6">
-              {/* Theme Toggle */}
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 transition-colors duration-200"
-                aria-label="Toggle Theme"
-              >
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-
+            <div className="flex items-center pl-6">
               {/* Resume Button */}
               <a
-                href="#resume"
+                href="/Sanjana_HP_Resume.pdf"
+                download="Sanjana_HP_Resume.pdf"
                 className="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-md shadow-indigo-600/20 dark:shadow-indigo-950/20 hover:scale-105 transition-all duration-200"
               >
                 <Download size={14} />
@@ -82,14 +76,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-3">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400 transition-colors duration-200"
-              aria-label="Toggle Theme"
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors duration-200"
@@ -118,7 +105,8 @@ export const Navbar: React.FC = () => {
           ))}
           <div className="pt-4 pb-2 px-3 border-t border-slate-200 dark:border-slate-800 mt-2">
             <a
-              href="#resume"
+              href="/Sanjana_HP_Resume.pdf"
+              download="Sanjana_HP_Resume.pdf"
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-full text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-medium text-sm transition-all"
             >

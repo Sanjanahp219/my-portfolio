@@ -40,7 +40,7 @@ function App() {
   return (
     <ThemeProvider>
       <ReactLenis ref={lenisRef} autoRaf={false} root>
-        <BackgroundAnimation />
+        <BackgroundAnimation/>
         <div className="min-h-screen bg-transparent text-slate-850 dark:text-slate-100 transition-colors duration-300 flex flex-col relative z-10">
           <Navbar />
           <main className="flex-grow">
