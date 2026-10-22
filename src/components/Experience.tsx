@@ -64,7 +64,7 @@ export const Experience: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             Professional Experience
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-12 h-1 bg-emerald-500 dark:bg-emerald-400 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 dark:text-slate-400 text-lg">
             A review of my active role and contributions as a Front End Developer.
           </p>
@@ -72,10 +72,10 @@ export const Experience: React.FC = () => {
 
         {/* Timeline Layout */}
         <div className="max-w-3xl mx-auto">
-          <div className="relative border-l-2 border-indigo-250 dark:border-indigo-900 pl-8 ml-4 exp-reveal">
+          <div className="relative border-l-2 border-emerald-200 dark:border-emerald-900/60 pl-8 ml-4 exp-reveal">
             
             {/* Timeline dot */}
-            <div className="absolute -left-[11px] top-0 p-1.5 bg-indigo-600 dark:bg-indigo-500 text-white rounded-full ring-4 ring-indigo-100 dark:ring-indigo-950">
+            <div className="absolute -left-[11px] top-0 p-1.5 bg-emerald-600 dark:bg-emerald-500 text-white rounded-full ring-4 ring-emerald-100 dark:ring-emerald-950">
               <Briefcase size={14} />
             </div>
 
@@ -88,19 +88,19 @@ export const Experience: React.FC = () => {
                   <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
                     Front End Developer
                   </h3>
-                  <p className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 mt-1">
+                  <p className="text-lg font-semibold text-emerald-600 dark:text-emerald-400 mt-1">
                     Swaragh Technologies
                   </p>
                 </div>
                 
                 {/* Meta details */}
                 <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-550 dark:text-slate-400">
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full">
-                    <Calendar size={12} className="text-indigo-600 dark:text-indigo-400" />
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-xl">
+                    <Calendar size={12} className="text-emerald-600 dark:text-emerald-400" />
                     <span>Jan 2025 - Present</span>
                   </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full">
-                    <MapPin size={12} className="text-indigo-600 dark:text-indigo-400" />
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-xl">
+                    <MapPin size={12} className="text-emerald-600 dark:text-emerald-400" />
                     <span>Bangalore, Karnataka, India</span>
                   </div>
                 </div>

@@ -262,13 +262,13 @@ export const Projects: React.FC = () => {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-[30px] sm:mb-14 project-reveal">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/30 mb-3">
-            <Sparkles size={14} className="text-indigo-500 animate-pulse" />
+            <Sparkles size={14} className="text-emerald-500 animate-pulse" />
             <span>Interactive Showcase</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             Featured Projects
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-5"></div>
+          <div className="w-12 h-1 bg-emerald-500 dark:bg-emerald-400 mx-auto rounded-full mb-5"></div>
           <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base md:text-lg">
             A selection of production-ready applications, showcasing responsive architecture, state management pipelines, and REST API integrations.
           </p>
@@ -303,7 +303,7 @@ export const Projects: React.FC = () => {
                   <div 
                     className={`flex flex-col h-full rounded-3xl overflow-hidden transition-all duration-300 ${
                       isActive 
-                        ? 'bg-white dark:bg-slate-900 border border-indigo-500/50 dark:border-indigo-400/50 shadow-2xl shadow-indigo-600/30 dark:shadow-indigo-950/90 ring-1 ring-indigo-500/30' 
+                        ? 'bg-white dark:bg-slate-900 border border-emerald-500/50 dark:border-emerald-400/50 shadow-2xl shadow-emerald-950/20 dark:shadow-emerald-950/70 ring-1 ring-emerald-500/30' 
                         : 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200/70 dark:border-slate-800/70 shadow-lg'
                     }`}
                   >
@@ -322,7 +322,7 @@ export const Projects: React.FC = () => {
                             e.stopPropagation();
                             setSelectedProject(project);
                           }}
-                          className="p-2.5 bg-white text-slate-900 rounded-full hover:scale-110 shadow-lg transition-transform duration-200"
+                          className="p-2.5 bg-white text-slate-900 hover:text-emerald-700 rounded-xl hover:scale-110 shadow-lg transition-transform duration-200"
                           aria-label="View Project Info"
                         >
                           <Info size={18} />
@@ -332,7 +332,7 @@ export const Projects: React.FC = () => {
                           target="_blank" 
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className="p-2.5 bg-white text-slate-900 rounded-full hover:scale-110 shadow-lg transition-transform duration-200"
+                          className="p-2.5 bg-white text-slate-900 hover:text-emerald-700 rounded-xl hover:scale-110 shadow-lg transition-transform duration-200"
                           aria-label={project.isWebsite ? "Visit Website" : "GitHub Repository"}
                         >
                           {project.isWebsite ? <ExternalLink size={18} /> : <Github size={18} />}
@@ -341,7 +341,7 @@ export const Projects: React.FC = () => {
                       
                       {/* Active Project Pill Badge */}
                       {isActive && (
-                        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-indigo-600/90 text-white backdrop-blur-md shadow-md shadow-indigo-600/30">
+                        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-xl text-[10px] font-extrabold uppercase tracking-wider bg-emerald-600/90 text-white backdrop-blur-md shadow-md shadow-emerald-600/30">
                           Active Showcase
                         </div>
                       )}
@@ -353,7 +353,7 @@ export const Projects: React.FC = () => {
                         <h3 className="text-base sm:text-lg md:text-xl font-bold text-slate-900 dark:text-white mb-0.5 line-clamp-1">
                           {project.title}
                         </h3>
-                        <p className="text-[11px] sm:text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide line-clamp-1">
+                        <p className="text-[11px] sm:text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide line-clamp-1">
                           {project.subtitle}
                         </p>
                       </div>
@@ -386,7 +386,7 @@ export const Projects: React.FC = () => {
                             e.stopPropagation();
                             setSelectedProject(project);
                           }}
-                          className="flex-grow inline-flex justify-center items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/40 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors"
+                          className="flex-grow inline-flex justify-center items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 border border-emerald-200/50 dark:border-emerald-800/40 transition-colors"
                         >
                           <span>View Details</span>
                         </button>
@@ -396,7 +396,7 @@ export const Projects: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 transition-colors"
+                            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl text-emerald-700 dark:text-emerald-300 hover:text-emerald-800 dark:hover:text-emerald-200 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 transition-colors"
                             aria-label="Visit Website"
                           >
                             <span>Live Site</span>
@@ -408,7 +408,7 @@ export const Projects: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
-                            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
+                            className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold rounded-xl text-slate-700 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
                             aria-label="View on GitHub"
                           >
                             <span>GitHub</span>
@@ -431,21 +431,21 @@ export const Projects: React.FC = () => {
             <div className="flex items-center gap-2">
               <button
                 onClick={handlePrev}
-                className="p-2.5 rounded-full glass hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:scale-110 active:scale-95 transition-all shadow-sm"
+                className="p-2.5 rounded-xl glass hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-sm"
                 aria-label="Previous project"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
                 onClick={handleNext}
-                className="p-2.5 rounded-full glass hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:scale-110 active:scale-95 transition-all shadow-sm"
+                className="p-2.5 rounded-xl glass hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-700 dark:text-slate-300 hover:text-emerald-700 dark:hover:text-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-sm"
                 aria-label="Next project"
               >
                 <ChevronRight size={20} />
               </button>
               <button
                 onClick={() => setIsPaused(!isPaused)}
-                className="p-2.5 rounded-full glass hover:bg-indigo-50 dark:hover:bg-indigo-950/40 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:scale-105 active:scale-95 transition-all shadow-sm ml-1"
+                className="p-2.5 rounded-xl glass hover:bg-emerald-50 dark:hover:bg-emerald-950/40 text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-400 hover:scale-105 active:scale-95 transition-all shadow-sm ml-1"
                 aria-label={isPaused ? "Play rotation" : "Pause rotation"}
                 title={isPaused ? "Resume auto-rotation" : "Pause auto-rotation"}
               >
@@ -463,7 +463,7 @@ export const Projects: React.FC = () => {
                     onClick={() => setActiveIndex(idx)}
                     className={`relative overflow-hidden transition-all duration-300 rounded-full ${
                       isActive 
-                        ? 'w-10 h-2.5 bg-slate-200 dark:bg-slate-800 border border-indigo-500/40' 
+                        ? 'w-10 h-2.5 bg-slate-200 dark:bg-slate-800 border border-emerald-500/40' 
                         : 'w-2.5 h-2.5 bg-slate-300 dark:bg-slate-700 hover:bg-slate-400 dark:hover:bg-slate-500'
                     }`}
                     aria-label={`Go to project ${idx + 1}`}
@@ -471,7 +471,7 @@ export const Projects: React.FC = () => {
                     {isActive && (
                       <span 
                         key={activeIndex}
-                        className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-full"
+                        className="absolute inset-0 bg-emerald-500 dark:bg-emerald-400 rounded-full"
                         style={{
                           animation: isPaused ? 'none' : 'carouselProgress 3.5s linear forwards',
                           width: isPaused ? '100%' : undefined,
@@ -485,7 +485,7 @@ export const Projects: React.FC = () => {
 
             {/* Current Project Caption */}
             <div className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              <span className="text-indigo-600 dark:text-indigo-400 font-bold">0{activeIndex + 1}</span> / 0{projects.length} • {projects[activeIndex].title}
+              <span className="text-emerald-600 dark:text-emerald-400 font-bold">0{activeIndex + 1}</span> / 0{projects.length} • {projects[activeIndex].title}
             </div>
 
           </div>
@@ -514,13 +514,13 @@ export const Projects: React.FC = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white line-clamp-1">
                     {selectedProject.title}
                   </h3>
-                  <p className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">
+                  <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
                     {selectedProject.subtitle}
                   </p>
                 </div>
                 <button 
                   onClick={() => setSelectedProject(null)}
-                  className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400 transition-colors"
+                  className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400 transition-colors"
                   aria-label="Close modal"
                 >
                   <X size={20} />
@@ -551,7 +551,7 @@ export const Projects: React.FC = () => {
                           href={selectedProject.demoUrl} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="w-full inline-flex justify-center items-center gap-2 py-3 px-4 rounded-xl font-bold text-white bg-indigo-600 hover:bg-indigo-700 shadow-lg shadow-indigo-600/25 dark:shadow-indigo-950/25 transition-all text-sm"
+                          className="w-full inline-flex justify-center items-center gap-2 py-3 px-4 rounded-xl font-bold text-white bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-slate-950 shadow-sm shadow-emerald-900/10 hover:shadow-md hover:shadow-emerald-600/20 transition-all text-sm"
                         >
                           <ExternalLink size={16} />
                           <span>Visit Live Website</span>
@@ -561,7 +561,7 @@ export const Projects: React.FC = () => {
                           href={selectedProject.githubUrl} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="w-full inline-flex justify-center items-center gap-2.5 py-3 px-4 rounded-xl font-bold text-white bg-slate-900 dark:bg-slate-800 hover:bg-indigo-600 dark:hover:bg-indigo-600 border border-slate-800 dark:border-slate-700 shadow-lg shadow-slate-950/20 transition-all text-sm"
+                          className="w-full inline-flex justify-center items-center gap-2.5 py-3 px-4 rounded-xl font-bold text-white bg-slate-900 dark:bg-slate-800 hover:bg-emerald-600 dark:hover:bg-emerald-600 border border-slate-800 dark:border-slate-700 shadow-sm transition-all text-sm"
                         >
                           <Github size={18} />
                           <span>View on GitHub</span>
@@ -589,7 +589,7 @@ export const Projects: React.FC = () => {
                       <ul className="space-y-2">
                         {selectedProject.features.map((feature, fIdx) => (
                           <li key={fIdx} className="flex gap-2.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 items-start">
-                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 flex-shrink-0"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-1.5 flex-shrink-0"></span>
                             <span className="leading-relaxed">{feature}</span>
                           </li>
                         ))}

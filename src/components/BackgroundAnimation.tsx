@@ -50,24 +50,24 @@ export const BackgroundAnimation: React.FC = () => {
       if (currentTheme === 'dark') {
         return {
           particlePalette: [
-            'rgba(99, 102, 241, opacity)',  // Indigo
-            'rgba(147, 51, 234, opacity)',  // Purple
-            'rgba(59, 130, 246, opacity)',  // Blue
+            'rgba(16, 185, 129, opacity)',  // Emerald-500
+            'rgba(20, 184, 166, opacity)',  // Teal-500
+            'rgba(52, 211, 153, opacity)',  // Emerald-400
             'rgba(255, 255, 255, opacity)', // White
           ],
           codeColor: 'rgba(51, 65, 85, 0.045)', // Slate-700 at low opacity
-          codeGlow: 'rgba(99, 102, 241, 0.025)',
+          codeGlow: 'rgba(16, 185, 129, 0.025)',
         };
       } else {
         return {
           particlePalette: [
-            'rgba(79, 70, 229, opacity)',   // Indigo-600
-            'rgba(124, 58, 237, opacity)',  // Violet-600
-            'rgba(37, 99, 235, opacity)',   // Blue-600
+            'rgba(5, 150, 105, opacity)',   // Emerald-600
+            'rgba(13, 148, 136, opacity)',  // Teal-600
+            'rgba(16, 185, 129, opacity)',  // Emerald-500
             'rgba(100, 116, 139, opacity)', // Slate-500
           ],
           codeColor: 'rgba(148, 163, 184, 0.02)', // Light Slate-400 at lower opacity
-          codeGlow: 'rgba(79, 70, 229, 0.01)',
+          codeGlow: 'rgba(5, 150, 105, 0.01)',
         };
       }
     };

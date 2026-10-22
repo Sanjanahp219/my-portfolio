@@ -63,7 +63,7 @@ export const WhyHireMe: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             Why Hire Me?
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-12 h-1 bg-emerald-500 dark:bg-emerald-400 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 dark:text-slate-400 text-lg">
             What I bring to your engineering team as a dedicated React & Front-End Developer.
           </p>
@@ -82,11 +82,11 @@ export const WhyHireMe: React.FC = () => {
                     {reason.icon}
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-200">
                     {reason.title}
                   </h3>
                   
-                  <p className="text-xs font-semibold text-indigo-500 dark:text-indigo-400 mb-4 tracking-wide uppercase">
+                  <p className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-4 tracking-wide uppercase">
                     {reason.tagline}
                   </p>
 
@@ -96,7 +96,7 @@ export const WhyHireMe: React.FC = () => {
                 </div>
 
                 {/* Decorative line decoration */}
-                <div className="w-8 h-1 bg-slate-200 dark:bg-slate-850 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-indigo-500 rounded-full transition-all duration-300 mt-6"></div>
+                <div className="w-8 h-1 bg-slate-200 dark:bg-slate-850 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-emerald-500 group-hover:to-teal-500 rounded-full transition-all duration-300 mt-6"></div>
               </div>
             </div>
           ))}

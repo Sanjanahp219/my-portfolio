@@ -200,7 +200,7 @@ export const Contact: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             Get In Touch
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-12 h-1 bg-emerald-500 dark:bg-emerald-400 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 dark:text-slate-400 text-lg">
             Reviewed my resume or have an opportunity? Let's discuss full-time roles, contracts, or web projects!
           </p>
@@ -256,7 +256,7 @@ export const Contact: React.FC = () => {
                     href={social.href}
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-3.5 bg-slate-50 hover:bg-indigo-650 dark:bg-slate-800/30 dark:hover:bg-indigo-600 rounded-2xl text-slate-600 hover:text-white dark:text-slate-350 dark:hover:text-white border border-slate-200 dark:border-slate-850 hover:shadow-lg shadow-indigo-600/10 transition-all duration-200"
+                    className="p-3.5 bg-slate-50 hover:bg-emerald-600 dark:bg-slate-800/30 dark:hover:bg-emerald-600 rounded-2xl text-slate-600 hover:text-white dark:text-slate-350 dark:hover:text-white border border-slate-200 dark:border-slate-850 hover:shadow-lg shadow-emerald-600/10 transition-all duration-200"
                     aria-label={social.label}
                   >
                     {social.icon}
@@ -279,11 +279,11 @@ export const Contact: React.FC = () => {
                     Message Sent Successfully!
                   </h4>
                   <p className="text-sm text-slate-650 dark:text-slate-400 max-w-sm mx-auto leading-relaxed">
-                    Thank you for reaching out! Your opportunity details have been sent directly to Sanjana's email (<span className="font-semibold text-indigo-600 dark:text-indigo-400">sanjanahp2020@gmail.com</span>). I will respond as soon as possible.
+                    Thank you for reaching out! Your opportunity details have been sent directly to Sanjana's email (<span className="font-semibold text-emerald-600 dark:text-emerald-400">sanjanahp2020@gmail.com</span>). I will respond as soon as possible.
                   </p>
                   <button 
                     onClick={() => setSubmitted(false)}
-                    className="mt-6 px-6 py-2.5 text-sm font-semibold rounded-full text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition-colors"
+                    className="mt-6 px-6 py-2.5 text-sm font-semibold rounded-xl text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-colors"
                   >
                     Send another message
                   </button>
@@ -316,7 +316,7 @@ export const Contact: React.FC = () => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="e.g. Sarah Jenkins"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
                         disabled={loading}
                       />
                     </div>
@@ -333,7 +333,7 @@ export const Contact: React.FC = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="e.g. sarah@company.com"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
                         disabled={loading}
                       />
                     </div>
@@ -352,7 +352,7 @@ export const Contact: React.FC = () => {
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
                         placeholder="e.g. Acme Inc / Startup"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
                         disabled={loading}
                       />
                     </div>
@@ -368,7 +368,7 @@ export const Contact: React.FC = () => {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
                         disabled={loading}
                       />
                     </div>
@@ -387,7 +387,7 @@ export const Contact: React.FC = () => {
                           required
                           value={opportunityType}
                           onChange={(e) => setOpportunityType(e.target.value)}
-                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm text-slate-800 dark:text-white transition-all appearance-none cursor-pointer pr-9"
+                          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm text-slate-800 dark:text-white transition-all appearance-none cursor-pointer pr-9"
                           disabled={loading}
                         >
                           <option value="Full-Time Job Opportunity" className="bg-white dark:bg-slate-900 text-slate-850 dark:text-slate-100">💼 Full-Time Job Opportunity</option>
@@ -416,7 +416,7 @@ export const Contact: React.FC = () => {
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                         placeholder="e.g. React.js Developer Role"
-                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm text-slate-800 dark:text-white transition-all placeholder:text-slate-400 dark:placeholder:text-slate-500"
                         disabled={loading}
                       />
                     </div>
@@ -435,7 +435,7 @@ export const Contact: React.FC = () => {
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Please share details such as role requirements, tech stack, location/remote mode, budget, or meeting availability..."
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 text-sm text-slate-800 dark:text-white transition-all resize-none placeholder:text-slate-400 dark:placeholder:text-slate-500"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-250 dark:border-slate-800 bg-white dark:bg-slate-900/60 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 text-sm text-slate-800 dark:text-white transition-all resize-none placeholder:text-slate-400 dark:placeholder:text-slate-500"
                       disabled={loading}
                     ></textarea>
                   </div>
@@ -450,7 +450,7 @@ export const Contact: React.FC = () => {
                   {/* Submit Button */}
                   <button 
                     type="submit" 
-                    className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl text-white font-bold bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 shadow-lg shadow-indigo-600/20 dark:shadow-indigo-950/20 hover:scale-[1.01] active:scale-[0.99] transition-all cursor-pointer disabled:cursor-not-allowed"
+                    className="inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl text-white font-bold bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-slate-950 disabled:bg-emerald-400 dark:disabled:bg-emerald-800 disabled:text-white/70 shadow-sm shadow-emerald-900/10 hover:shadow-md hover:shadow-emerald-600/20 active:scale-[0.99] transition-all cursor-pointer disabled:cursor-not-allowed"
                     disabled={loading}
                   >
                     {loading ? (

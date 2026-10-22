@@ -36,7 +36,7 @@ export const Resume: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             Curriculum Vitae
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-12 h-1 bg-emerald-500 dark:bg-emerald-400 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 dark:text-slate-400 text-lg">
             Review my professional resume or download a copy for offline reading.
           </p>
@@ -58,7 +58,7 @@ export const Resume: React.FC = () => {
               <a
                 href="/Sanjana_HP_Resume.pdf"
                 download="Sanjana_HP_Resume.pdf"
-                className="inline-flex justify-center items-center gap-2.5 px-8 py-4 rounded-2xl font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-xl shadow-indigo-600/25 dark:shadow-indigo-950/40 hover:scale-105 active:scale-98 transition-all duration-200 text-sm sm:text-base group"
+                className="inline-flex justify-center items-center gap-2.5 px-8 py-3.5 rounded-xl font-bold text-white bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-slate-950 shadow-sm shadow-emerald-900/10 hover:shadow-md hover:shadow-emerald-600/20 active:scale-98 transition-all duration-200 text-sm sm:text-base group"
                 aria-label="Download Resume"
               >
                 <FileDown size={20} className="group-hover:translate-y-0.5 transition-transform duration-200" />
@@ -74,12 +74,12 @@ export const Resume: React.FC = () => {
             <div className="relative w-full max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8 sm:p-10 rounded-3xl shadow-2xl transition-transform duration-350 hover:scale-102 hover:rotate-1">
               
               {/* Top border glow decoration */}
-              <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-t-3xl"></div>
+              <div className="absolute top-0 inset-x-0 h-1 bg-emerald-500 dark:bg-emerald-400 rounded-t-3xl"></div>
 
               {/* Resume Header */}
               <div className="border-b border-slate-150 dark:border-slate-850 pb-6 mb-6">
                 <h4 className="text-xl font-bold text-slate-900 dark:text-white">SANJANA H P</h4>
-                <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mt-0.5">Front End Developer</p>
+                <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">Front End Developer</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">sanjanahp2020@gmail.com | +91 82177 62899 | Bangalore, India</p>
               </div>
 
@@ -87,12 +87,12 @@ export const Resume: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <h5 className="flex items-center gap-2 text-xs font-extrabold text-slate-800 dark:text-slate-300 uppercase tracking-wider mb-3">
-                    <Briefcase size={12} className="text-indigo-600 dark:text-indigo-400" />
+                    <Briefcase size={12} className="text-emerald-600 dark:text-emerald-400" />
                     <span>Recent Experience</span>
                   </h5>
                   <div className="pl-4 border-l border-slate-200 dark:border-slate-800">
                     <p className="text-sm font-bold text-slate-900 dark:text-white">Front End Developer</p>
-                    <p className="text-xs text-indigo-600 dark:text-indigo-400 mt-0.5">Swaragh Technologies, Bangalore | Jan 2025 - Present</p>
+                    <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-0.5">Swaragh Technologies, Bangalore | Jan 2025 - Present</p>
                     <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 line-clamp-2">
                       Build modular React frontend features, Redux Toolkit state architectures, REST API integrations, and frontend performance optimizations.
                     </p>
@@ -102,7 +102,7 @@ export const Resume: React.FC = () => {
                 {/* Skills Mini Block */}
                 <div>
                   <h5 className="flex items-center gap-2 text-xs font-extrabold text-slate-800 dark:text-slate-300 uppercase tracking-wider mb-3">
-                    <Award size={12} className="text-indigo-600 dark:text-indigo-400" />
+                    <Award size={12} className="text-emerald-600 dark:text-emerald-400" />
                     <span>Technical Highlights</span>
                   </h5>
                   <div className="flex flex-wrap gap-1.5 pl-4">

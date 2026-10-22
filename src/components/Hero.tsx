@@ -176,20 +176,20 @@ export const Hero: React.FC = () => {
       className="relative pt-28 sm:pt-32 lg:pt-36 pb-0 sm:pb-2 lg:pb-4 overflow-hidden transition-colors duration-300"
     >
       {/* Background Gradients blobs */}
-      <div className="absolute top-1/4 left-1/10 w-72 h-72 sm:w-96 sm:h-96 bg-blue-600/10 dark:bg-blue-600/5 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
-      <div className="absolute bottom-1/4 right-1/10 w-72 h-72 sm:w-96 sm:h-96 bg-purple-600/10 dark:bg-purple-600/5 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+      <div className="absolute top-1/4 left-1/10 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-600/10 dark:bg-emerald-600/5 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
+      <div className="absolute bottom-1/4 right-1/10 w-72 h-72 sm:w-96 sm:h-96 bg-teal-600/10 dark:bg-teal-600/5 rounded-full blur-3xl -z-10 animate-pulse-slow"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
 
           {/* Left Column: Details */}
           <div className="lg:col-span-7 flex flex-col justify-center text-center lg:text-left">
-            <span className="hero-badge-intro inline-flex items-center self-center lg:self-start px-3 py-1 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/30 mb-3 sm:mb-4 max-w-full">
+            <span className="hero-badge-intro inline-flex items-center self-center lg:self-start px-3.5 py-1 rounded-xl text-xs sm:text-sm font-semibold tracking-wide uppercase bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-900/40 mb-3 sm:mb-4 max-w-full">
               Front End Developer | React.js Developer
             </span>
 
             <h1 className="hero-title tracking-tight text-slate-900 dark:text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-5xl mb-2 sm:mb-3 leading-tight">
-              Hi, I'm <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">Sanjana H P</span>
+              Hi, I'm <span className="bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-300 bg-clip-text text-transparent">Sanjana H P</span>
             </h1>
 
             <h2 className="hero-subtitle text-base sm:text-lg md:text-xl font-bold text-slate-700 dark:text-slate-300 mb-3 sm:mb-4 min-h-[28px] sm:min-h-[32px]">
@@ -205,7 +205,7 @@ export const Hero: React.FC = () => {
               <a
                 ref={ctaProjectsRef}
                 href="#projects"
-                className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:opacity-95 shadow-lg shadow-indigo-600/25 dark:shadow-indigo-950/40 hover:shadow-indigo-600/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-xs sm:text-sm font-semibold"
+                className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-white bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-slate-950 shadow-sm shadow-emerald-900/10 hover:shadow-md hover:shadow-emerald-600/20 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-xs sm:text-sm font-semibold"
               >
                 <span>View Projects</span>
                 <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform duration-200" />
@@ -213,7 +213,7 @@ export const Hero: React.FC = () => {
               <a
                 ref={ctaResumeRef}
                 href="#resume"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-slate-700 dark:text-slate-200 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50/40 dark:hover:bg-indigo-950/30 hover:text-indigo-600 dark:hover:text-indigo-400 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 hover:bg-emerald-50/40 dark:hover:bg-emerald-950/30 hover:text-emerald-700 dark:hover:text-emerald-400 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs"
               >
                 <FileText size={15} />
                 <span>View Resume</span>
@@ -221,7 +221,7 @@ export const Hero: React.FC = () => {
               <a
                 ref={ctaContactRef}
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-slate-700 dark:text-slate-200 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50/40 dark:hover:bg-indigo-950/30 hover:text-indigo-600 dark:hover:text-indigo-400 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900/80 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 hover:bg-emerald-50/40 dark:hover:bg-emerald-950/30 hover:text-emerald-700 dark:hover:text-emerald-400 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs"
               >
                 <Mail size={15} />
                 <span>Contact Me</span>
@@ -231,19 +231,19 @@ export const Hero: React.FC = () => {
             {/* Quick Stats */}
             <div className="hero-stats grid grid-cols-3 gap-2 sm:gap-4 border-t border-slate-200 dark:border-slate-850 pt-4 sm:pt-5 max-w-lg mx-auto lg:mx-0 w-full">
               <div className="text-center sm:text-left">
-                <p className="text-lg xs:text-xl sm:text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">
+                <p className="text-lg xs:text-xl sm:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">
                   {statsCount.exp}+
                 </p>
                 <p className="text-[11px] xs:text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium leading-tight">Years Experience</p>
               </div>
               <div className="text-center sm:text-left">
-                <p className="text-lg xs:text-xl sm:text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">
+                <p className="text-lg xs:text-xl sm:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">
                   {statsCount.projects}+
                 </p>
                 <p className="text-[11px] xs:text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium leading-tight">Projects Delivered</p>
               </div>
               <div className="text-center sm:text-left">
-                <p className="text-lg xs:text-xl sm:text-2xl font-extrabold text-indigo-600 dark:text-indigo-400">
+                <p className="text-lg xs:text-xl sm:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400">
                   {statsCount.systems}+
                 </p>
                 <p className="text-[11px] xs:text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium leading-tight">Production Systems</p>
@@ -252,13 +252,13 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Right Column: Profile Photo */}
-          <div className="flex lg:col-span-5 relative justify-center items-center mt-4 lg:mt-0">
+          <div className="flex lg:col-span-5 relative justify-center items-center mt-6 lg:mt-0">
 
             {/* Glow blob behind photo */}
-            <div className="absolute w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 opacity-20 dark:opacity-30 blur-3xl -z-10"></div>
+            <div className="absolute w-[86vw] max-w-[360px] h-[96vw] max-h-[400px] sm:w-[23rem] sm:h-[25rem] md:w-[25rem] md:h-[27rem] lg:w-[27rem] lg:h-[29rem] xl:w-[29rem] xl:h-[31rem] rounded-3xl bg-gradient-to-tr from-emerald-600 to-teal-500 opacity-20 dark:opacity-25 blur-3xl -z-10"></div>
 
             {/* Profile Photo - Elegant Frame */}
-            <div className="hero-image-container relative w-52 h-52 xs:w-60 xs:h-60 sm:w-72 sm:h-72 md:w-[19rem] md:h-[19rem] lg:w-[22rem] lg:h-[22rem] p-1.5 rounded-3xl bg-gradient-to-b from-indigo-500/25 via-purple-500/10 to-transparent shadow-2xl shadow-indigo-600/20 dark:shadow-indigo-950/40 transition-transform duration-300 hover:scale-[1.02]">
+            <div className="hero-image-container relative w-[84vw] max-w-[340px] h-[94vw] max-h-[385px] sm:w-[22rem] sm:h-[24rem] md:w-[24rem] md:h-[26rem] lg:w-[26rem] lg:h-[28rem] xl:w-[28rem] xl:h-[30rem] p-1.5 rounded-3xl bg-gradient-to-b from-emerald-500/25 via-teal-500/10 to-transparent shadow-2xl shadow-emerald-950/20 dark:shadow-emerald-950/40 transition-transform duration-300 hover:scale-[1.02]">
               <div className="w-full h-full rounded-[22px] overflow-hidden">
                 <img
                   src={profilePhoto}

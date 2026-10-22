@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
               <a
                 href="/Sanjana_HP_Resume.pdf"
                 download="Sanjana_HP_Resume.pdf"
-                className="inline-flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-full text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-md shadow-indigo-600/20 dark:shadow-indigo-950/20 hover:scale-105 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-emerald-600/20 dark:border-emerald-400/20 text-sm font-semibold rounded-xl text-white bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-slate-950 shadow-sm shadow-emerald-900/10 hover:shadow-md hover:shadow-emerald-600/20 active:scale-95 transition-all duration-200"
               >
                 <Download size={14} />
                 <span>Resume</span>
@@ -108,7 +108,7 @@ export const Navbar: React.FC = () => {
               href="/Sanjana_HP_Resume.pdf"
               download="Sanjana_HP_Resume.pdf"
               onClick={() => setIsOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-full text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-medium text-sm transition-all"
+              className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-white bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-slate-950 font-semibold text-sm shadow-sm transition-all duration-200 active:scale-98"
             >
               <Download size={16} />
               <span>Download Resume</span>

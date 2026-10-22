@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
           
           {/* Logo & Tagline */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent inline-block font-sans">
+            <h3 className="text-xl font-bold tracking-tight bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-emerald-400 dark:to-teal-300 bg-clip-text text-transparent inline-block font-sans">
               Sanjana H P
             </h3>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">

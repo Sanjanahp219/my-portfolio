@@ -94,7 +94,7 @@ export const Skills: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             My Skills & Expertise
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-12 h-1 bg-emerald-500 dark:bg-emerald-400 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 dark:text-slate-400 text-lg">
             Here are the languages, frameworks, libraries, and tools I have specialized in over the past 2+ years.
           </p>
@@ -105,7 +105,7 @@ export const Skills: React.FC = () => {
           {skillCategories.map((category, idx) => (
             <div key={idx} className="skills-reveal">
               <div 
-                className={`flex flex-col justify-between h-full p-8 rounded-3xl bg-gradient-to-br ${category.gradient} border border-slate-200 dark:border-slate-800/80 shadow-md hover:shadow-2xl dark:hover:shadow-indigo-950/20 hover:-translate-y-1.5 transition-all duration-300 group glow-card-hover`}
+                className={`flex flex-col justify-between h-full p-8 rounded-3xl bg-gradient-to-br ${category.gradient} border border-slate-200 dark:border-slate-800/80 shadow-md hover:shadow-2xl dark:hover:shadow-emerald-950/20 hover:-translate-y-1.5 transition-all duration-300 group glow-card-hover`}
               >
                 <div>
                   {/* Header */}
@@ -123,7 +123,7 @@ export const Skills: React.FC = () => {
                     {category.skills.map((skill, sIdx) => (
                       <span 
                         key={sIdx} 
-                        className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-indigo-500 hover:text-indigo-600 dark:hover:border-indigo-400 dark:hover:text-indigo-400 transition-all duration-200"
+                        className="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white dark:bg-slate-900/60 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-emerald-500 hover:text-emerald-700 dark:hover:border-emerald-400 dark:hover:text-emerald-400 transition-all duration-200"
                       >
                         {skill}
                       </span>
@@ -133,7 +133,7 @@ export const Skills: React.FC = () => {
                 
                 {/* Subtle indicator bar */}
                 <div className="w-full h-1 bg-slate-200 dark:bg-slate-850 rounded-full overflow-hidden mt-8">
-                  <div className="w-3/4 h-full bg-gradient-to-r from-blue-500 to-indigo-500 group-hover:w-full transition-all duration-500"></div>
+                  <div className="w-3/4 h-full bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-500"></div>
                 </div>
               </div>
             </div>

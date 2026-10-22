@@ -74,7 +74,7 @@ export const About: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             About Me
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+          <div className="w-12 h-1 bg-emerald-500 dark:bg-emerald-400 mx-auto rounded-full mb-6"></div>
           <p className="text-slate-600 dark:text-slate-400 text-lg">
             Let me share a brief story about my professional background and dedication to front-end craftsmanship.
           </p>
@@ -99,12 +99,12 @@ export const About: React.FC = () => {
             <div className="pt-4 flex justify-center lg:justify-start">
               <div className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center sm:justify-start bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-100 dark:border-slate-800">
                 <div className="text-center sm:text-left">
-                  <span className="block text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400">Jan 2025 - Present</span>
+                  <span className="block text-lg sm:text-xl font-extrabold text-emerald-600 dark:text-emerald-400">Jan 2025 - Present</span>
                   <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Experience Period</span>
                 </div>
                 <div className="hidden sm:block h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
                 <div className="text-center sm:text-left">
-                  <span className="block text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400">Swaragh Technologies</span>
+                  <span className="block text-lg sm:text-xl font-extrabold text-emerald-600 dark:text-emerald-400">Swaragh Technologies</span>
                   <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Company (Bangalore)</span>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export const About: React.FC = () => {
                   {phil.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-250 mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-250">
+                  <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-250 mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-250">
                     {phil.title}
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">

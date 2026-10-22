@@ -79,7 +79,7 @@
   }
 
   body {
-    @apply bg-transparent text-slate-800 transition-colors duration-300 font-sans antialiased selection:bg-primary-500 selection:text-white overflow-x-hidden;
+    @apply bg-transparent text-slate-800 transition-colors duration-300 font-sans antialiased selection:bg-emerald-600 selection:text-white overflow-x-hidden;
   }
 
   /* Force dark mode background when dark class is applied to root html element */
@@ -119,11 +119,11 @@
 
 /* Glowing shadows */
 .glow-primary {
-  box-shadow: 0 0 50px -10px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.2);
 }
 
 .glow-secondary {
-  box-shadow: 0 0 50px -10px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 0 50px -10px rgba(20, 184, 166, 0.2);
 }
 
 /* Custom Scrollbar */
@@ -217,8 +217,8 @@ html.lenis body {
 }
 
 .glow-card-hover:hover {
-  @apply border-indigo-500/35 dark:border-indigo-400/30;
-  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.15), 0 4px 12px -5px rgba(139, 92, 246, 0.1);
+  @apply border-emerald-500/35 dark:border-emerald-400/30;
+  box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.12), 0 4px 12px -5px rgba(20, 184, 166, 0.08);
 }
 
 /* ─── Responsive Section Spacing (360px → 1900px) ───────────────────────── */
@@ -256,6 +256,9 @@ main > #home,
 h2{font-size: 24px;}
 h3{font-size: 19px;}
 p{font-size: 16px;}
+.mt-6 {
+	margin-top: 0;
+}
 }
 
 /* Contact section — extra bottom padding */
