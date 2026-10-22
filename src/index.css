@@ -66,6 +66,7 @@
     from {
       width: 0%;
     }
+
     to {
       width: 100%;
     }
@@ -189,6 +190,7 @@ html.lenis body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -202,7 +204,8 @@ html.lenis body {
 
 .parallax-bg-text {
   @apply font-extrabold uppercase tracking-widest text-slate-300/55 dark:text-slate-900/35 whitespace-nowrap leading-none;
-  font-size: clamp(3.5rem, 18vw, 16rem); /* scales from ~56px on mobile to 256px on wide screens */
+  font-size: clamp(3.5rem, 18vw, 16rem);
+  /* scales from ~56px on mobile to 256px on wide screens */
   font-family: 'Outfit', sans-serif;
   user-select: none;
   pointer-events: none;
@@ -219,11 +222,40 @@ html.lenis body {
 }
 
 /* ─── Responsive Section Spacing (360px → 1900px) ───────────────────────── */
-main > section,
-.dark main > section {
-  padding-top: 180px !important;
+main>section,
+.dark main>section {
+  padding-top: 100px !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+}
+
+/* Hero section specific padding to comfortably clear the fixed navbar */
+main > #home,
+.dark main > #home {
+  padding-top: 140px !important;
+}
+
+@media (max-width: 480px) {
+
+  main>section,
+  .dark main>section {
+    padding-top: 50px !important;
+  }
+
+  main > #home,
+  .dark main > #home {
+    padding-top: 130px !important;
+  }
+
+  .max-w-7xl.mx-auto.px-4.sm\:px-6.lg\:px-8.w-full {
+    padding: 0 20px 0;
+  }
+  .text-center.max-w-3xl {
+    margin-bottom: 30px !important;
+  }
+h2{font-size: 24px;}
+h3{font-size: 19px;}
+p{font-size: 16px;}
 }
 
 /* Contact section — extra bottom padding */
@@ -252,6 +284,7 @@ main > section,
   0% {
     width: 0%;
   }
+
   100% {
     width: 100%;
   }

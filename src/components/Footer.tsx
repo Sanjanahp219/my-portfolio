@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
               Sanjana H P
             </h3>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-              Front End Developer | React.js Specialist
+              Front End Developer | React.js Developer
             </p>
           </div>
 

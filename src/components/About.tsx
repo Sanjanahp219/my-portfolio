@@ -70,7 +70,7 @@ export const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16 about-reveal">
+        <div className="text-center max-w-3xl mx-auto mb-[30px] sm:mb-16 about-reveal">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             About Me
           </h2>
@@ -97,14 +97,14 @@ export const About: React.FC = () => {
             </p>
 
             <div className="pt-4 flex justify-center lg:justify-start">
-              <div className="flex gap-8 items-center bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-100 dark:border-slate-800">
-                <div>
-                  <span className="block text-xl font-extrabold text-indigo-600 dark:text-indigo-400">Jan 2025 - Present</span>
+              <div className="flex flex-wrap gap-4 sm:gap-8 items-center justify-center sm:justify-start bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-100 dark:border-slate-800">
+                <div className="text-center sm:text-left">
+                  <span className="block text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400">Jan 2025 - Present</span>
                   <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Experience Period</span>
                 </div>
-                <div className="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
-                <div>
-                  <span className="block text-xl font-extrabold text-indigo-600 dark:text-indigo-400">Swaragh Technologies</span>
+                <div className="hidden sm:block h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+                <div className="text-center sm:text-left">
+                  <span className="block text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400">Swaragh Technologies</span>
                   <span className="text-xs font-semibold text-slate-500 dark:text-slate-450 uppercase tracking-wider">Company (Bangalore)</span>
                 </div>
               </div>
@@ -116,16 +116,16 @@ export const About: React.FC = () => {
             {philosophies.map((phil, idx) => (
               <div 
                 key={idx} 
-                className="group flex gap-5 bg-slate-50 dark:bg-slate-800/25 border border-slate-150 dark:border-slate-800/50 p-6 rounded-2xl transition-all duration-300 hover:bg-white dark:hover:bg-slate-850 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-950/40 hover:-translate-y-1"
+                className="group flex items-start gap-4 sm:gap-5 bg-slate-50 dark:bg-slate-800/25 border border-slate-150 dark:border-slate-800/50 p-5 sm:p-6 rounded-2xl transition-all duration-300 hover:bg-white dark:hover:bg-slate-850 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-950/40 hover:-translate-y-1"
               >
-                <div className="flex-shrink-0 p-3 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-100 dark:border-slate-700/50 group-hover:scale-110 transition-transform duration-300">
+                <div className="flex-shrink-0 self-start w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-white dark:bg-slate-800 rounded-xl sm:rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50 group-hover:scale-110 transition-transform duration-300">
                   {phil.icon}
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold text-slate-800 dark:text-slate-250 mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-250">
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-base sm:text-lg font-bold text-slate-800 dark:text-slate-250 mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-250">
                     {phil.title}
                   </h4>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                     {phil.description}
                   </p>
                 </div>

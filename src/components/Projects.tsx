@@ -260,7 +260,7 @@ export const Projects: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 project-reveal">
+        <div className="text-center max-w-3xl mx-auto mb-[30px] sm:mb-14 project-reveal">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-900/30 mb-3">
             <Sparkles size={14} className="text-indigo-500 animate-pulse" />
             <span>Interactive Showcase</span>
